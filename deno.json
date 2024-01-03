@@ -1,0 +1,17 @@
+{
+    "name": "deno-workspace-playground",
+    "lock": false,
+    "workspaces": [
+        "src/api",
+        "src/app"
+    ],
+    "tasks": {
+        "dev:api": "deno run -A --watch --unstable-workspaces src/api/main.ts",
+        "dev:app": "deno run -A --watch --unstable-workspaces src/app/main.ts",
+        "check": "deno check --unstable-workspaces **/*.ts"
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "semiColons": false
+    }
+}
